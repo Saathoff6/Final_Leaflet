@@ -1,0 +1,30 @@
+---
+title: "FINAL"
+author: "Lela Saathoff"
+date: "5/3/2020"
+output:
+  html_document:
+    df_print: paged
+---
+
+
+```{r}
+install.packages("knitr")
+install.packages("leaflet")
+install.packages("sp")
+library(leaflet)
+library("knitr")
+library(sp)
+```
+
+```{r}
+
+Website<-c("<a href='http://www.crossfithuebner.com/'> Crossfit Huebner</a>")
+my_map <- leaflet()%>%
+  addTiles() %>% 
+  addMarkers(lat = -38.036030, lng = 141.014600, popup = Website)
+
+my_map
+
+```
+
